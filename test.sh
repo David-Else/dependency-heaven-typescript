@@ -1,4 +1,4 @@
 #!/bin/bash
 
 clear
-deno test --watch --allow-all --no-check test/ 
+deno test --config ./tsconfig.json --watch --allow-all --no-check test/ 
