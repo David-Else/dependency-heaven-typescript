@@ -1,6 +1,8 @@
 # Dependency Heaven Typescript
 
-You only need two executable files to write TypeScript for the browser: Deno and esbuild.
+Bundle, test, lint and format TypeScript with only Deno and esbuild. No Node needed! 
+
+You only need two executable files to write TypeScript for the browser: [Deno](https://deno.land/) and [esbuild](https://esbuild.github.io/).
 
 - Remember Deno needs file extensions, for example;
 
