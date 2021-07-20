@@ -19,7 +19,7 @@ Bundle and minify for the browser using Deno and the official esbuild plugin
 To build a development bundle from `src/main.ts` and serve to a your default browser on Linux/Mac:
 
 ```
-build-watch.js
+./build-watch.js
 ```
 
 - It will rebuild and reload dev server when any file in `./src` is modified
@@ -27,7 +27,7 @@ build-watch.js
 
 ## Test code
 
-run `test.sh` to execute all tests in the `/test` directory.
+run `./test-watch.sh` to execute all tests in the `/test` directory.
 
 Remember Deno has no DOM but many browser compatible API's
 

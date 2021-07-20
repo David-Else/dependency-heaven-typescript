@@ -20,7 +20,7 @@ esbuild
     },
     watch: {
       onRebuild(error, result) {
-        copySync("./static-assets", "./dist", { overwrite: true })
+        copySync("./src/static-assets", "./dist", { overwrite: true })
         clients.forEach((res) => res.write("data: update\n\n"));
         clients.length = 0;
         console.log(error ? error : "...");
