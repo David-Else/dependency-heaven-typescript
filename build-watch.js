@@ -2,12 +2,13 @@
 // deno run --allow-env --allow-read --allow-write --allow-net --allow-run  server.js
 import * as esbuild from "https://deno.land/x/esbuild/mod.js";
 import { listenAndServe } from "https://deno.land/std/http/server.ts";
+import { copySync } from "https://deno.land/std@0.102.0/fs/mod.ts";
 
 const clients = [];
 
 esbuild
   .build({
-    entryPoints: ["./src/mod.ts"],
+    entryPoints: ["./src/main.ts"],
     outfile: "./dist/bundle.js",
     bundle: true,
     format: "esm",
@@ -19,6 +20,7 @@ esbuild
     },
     watch: {
       onRebuild(error, result) {
+        copySync("./static-assets", "./dist", { overwrite: true })
         clients.forEach((res) => res.write("data: update\n\n"));
         clients.length = 0;
         console.log(error ? error : "...");
