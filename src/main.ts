@@ -5,8 +5,8 @@
  * @license gpl-3.0
  * @version 0.x
  */
-const elem = document.getElementById("test") as HTMLElement;
-elem.textContent += " World!";
+
+// Deno does not have a DOM so you will get runtime errors for tests using it
 
 export function example(): number {
   return 42;

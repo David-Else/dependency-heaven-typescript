@@ -1,17 +1,35 @@
-# Dependency Heaven Typescript 
+# Dependency Heaven Typescript
 
 You only need two executable files to write TypeScript for the browser: Deno and esbuild.
 
-## Bundle and serve TypeScript for the browser using Deno and the official esbuild plugin
+- Remember Deno needs file extensions, for example;
 
-To build a development bundle from `src/main.ts` and serve to a your default browser:
+```ts
+import { example } from "../src/main.ts";
+```
+
+These are taken care of by esbuild in the bundling.
+
+There is no need for Node anymore, you can import packages via URL's with their types using `https://cdn.skypack.dev/package-name`
+
+## Bundle and serve TypeScript
+
+Bundle and minify for the browser using Deno and the official esbuild plugin
+
+To build a development bundle from `src/main.ts` and serve to a your default browser on Linux/Mac:
 
 ```
-deno run -A --unstable build-watch.js
+build-watch.js
 ```
 
 - It will rebuild and reload dev server when any file in `./src` is modified
 - The contents of `./static-assets` will be copied to the `dist` folder on rebuild
+
+## Test code
+
+run `test.sh` to execute all tests in the `/test` directory.
+
+Remember Deno has no DOM but many browser compatible API's
 
 ## Neovim setup
 
