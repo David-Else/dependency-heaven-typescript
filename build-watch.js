@@ -1,5 +1,4 @@
 // https://github.com/evanw/esbuild/issues/802#issuecomment-819579154
-// deno run --allow-env --allow-read --allow-write --allow-net --allow-run  server.js
 import * as esbuild from "https://deno.land/x/esbuild/mod.js";
 import { listenAndServe } from "https://deno.land/std/http/server.ts";
 import { copySync } from "https://deno.land/std@0.102.0/fs/mod.ts";
