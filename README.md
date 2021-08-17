@@ -1,13 +1,13 @@
 # Dependency Heaven Typescript
 
-Bundle, test, lint and format TypeScript with only Deno and esbuild. No Node needed! 
+Bundle, test, lint and format TypeScript with only Deno and esbuild. No Node needed!
 
 You only need two executable files to write TypeScript for the browser: [Deno](https://deno.land/) and [esbuild](https://esbuild.github.io/).
 
 - Remember Deno needs file extensions, for example;
 
 ```ts
-import { example } from "../src/main.ts";
+import { example } from "./src/main.ts";
 ```
 
 These are taken care of by esbuild in the bundling.
@@ -20,7 +20,7 @@ Bundle and minify for the browser using Deno and the official esbuild plugin
 
 To build a development bundle from `src/main.ts` and serve to a your default browser on Linux/Mac:
 
-```
+```shell
 ./build-watch.js
 ```
 
@@ -37,7 +37,7 @@ Remember Deno has no DOM but many browser compatible API's
 
 To run Deno LSP in Neovim 0.5+ with linting and DOM types enabled via `tsconfig.json`:
 
-```
+```lua
 nvim_lsp.denols.setup({
   on_attach = on_attach,
   init_options = {
