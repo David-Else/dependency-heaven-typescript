@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-deno test --doc --config ./tsconfig.json *.md
+deno test --doc --config ./deno.jsonc *.md

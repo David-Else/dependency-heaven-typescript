@@ -35,13 +35,13 @@ Remember Deno has no DOM but many browser compatible API's
 
 ## Neovim setup
 
-To run Deno LSP in Neovim 0.5+ with linting and DOM types enabled via `tsconfig.json`:
+To run Deno LSP in Neovim 0.5+ with linting and DOM types enabled via `deno.jsonc`:
 
 ```lua
 nvim_lsp.denols.setup({
   on_attach = on_attach,
   init_options = {
-    config = "./tsconfig.json",
+    config = "./deno.jsonc",
     lint = true,
   },
 })
