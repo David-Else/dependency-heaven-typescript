@@ -1,6 +1,5 @@
 #!/usr/bin/env -S deno run --allow-all --unstable
 
-import * as esbuild from "./deps.ts";
 import { listenAndServe } from "./deps.ts";
 import { copySync } from "./deps.ts";
 
