@@ -4,7 +4,7 @@ import { listenAndServe } from "./deps.ts";
 import { copySync } from "./deps.ts";
 
 // https://github.com/evanw/esbuild/issues/802#issuecomment-819579154
-import * as esbuild from "https://deno.land/x/esbuild@v0.13.8/mod.js";
+import * as esbuild from "https://deno.land/x/esbuild@v0.12.29/mod.js";
 
 const clients = [];
 
