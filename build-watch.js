@@ -1,9 +1,9 @@
 #!/usr/bin/env -S deno run --allow-all --unstable
 // https://github.com/evanw/esbuild/issues/802#issuecomment-819579154
-import * as esbuild from "https://deno.land/x/esbuild@v0.12.28/mod.js";
+import * as esbuild from "https://deno.land/x/esbuild@v0.13.8/mod.js";
 // std@0.106.0 is final version to use old server code
 import { listenAndServe } from "https://deno.land/std@0.106.0/http/server.ts";
-import { copySync } from "https://deno.land/std@0.107.0/fs/mod.ts";
+import { copySync } from "https://deno.land/std@0.111.0/fs/mod.ts";
 
 const clients = [];
 
