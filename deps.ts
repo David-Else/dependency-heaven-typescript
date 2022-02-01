@@ -4,5 +4,5 @@ export {
   assertStrictEquals,
 } from "https://deno.land/std@0.111.0/testing/asserts.ts";
 
-export { copy } from "https://deno.land/std@0.123.0/fs/mod.ts";
+export { copySync } from "https://deno.land/std@0.123.0/fs/copy.ts";
 export { serve } from "https://deno.land/std@0.123.0/http/server.ts";
