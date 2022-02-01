@@ -1,6 +1,6 @@
 #!/usr/bin/env -S deno run --allow-all --unstable
 
-import { listenAndServe } from "./deps.ts";
+import { serve } from "./deps.ts";
 import { copySync } from "./deps.ts";
 
 // https://github.com/evanw/esbuild/issues/802#issuecomment-819579154
@@ -32,8 +32,8 @@ esbuild
   .then((result, error) => {})
   .catch(() => process.exit(1));
 
-esbuild.serve({ servedir: "./dist" }, {}).then(() => {
-  listenAndServe({ port: 3000 }, async (req) => {
+esbuild.serve({ servedir: "./" }, {}).then(() => {
+  serve(async (req) => {
     const { url, method, headers } = req;
     if (url === "/esbuild") {
       req.write = (data) => {
@@ -56,7 +56,7 @@ esbuild.serve({ servedir: "./dist" }, {}).then(() => {
       statusCode: res.statusCode,
       headers: res.headers,
     });
-  });
+  }, { port: 3000 });
 
   setTimeout(() => {
     const open = {
